@@ -109,7 +109,7 @@ def load_game
   # pastgames = Game.find_by(:player_id => @current_player.id)
   puts "id | hits | complete?"
   Game.all.each{|x|
-    puts "#{x.id} | #{x.hits}| #{x.completeness}" }
+    puts "#{x.id}  | #{x.hits}   | #{x.completeness}" }
   puts "please choose a game by game id"
   idinput =gets().chomp()
   @current_game = Game.find_by(:id => idinput)
