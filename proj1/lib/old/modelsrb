@@ -1,0 +1,31 @@
+class Run
+
+  def initialize
+    puts "Add your name please!"
+    @player = Player.new(gets.chomp.to_s)
+    menu
+  end
+
+def menu
+
+    while true
+      puts "
+						1. Start a new game
+						2. Load a previous game
+						3. Exit
+			"
+      case gets.chomp.to_s.downcase
+      when 1
+					@player.start_game
+      when 2
+					@player.load_game
+      when 3
+					puts "Goodbye"
+					break
+      else
+				puts "That's not a valid input."
+	      end
+	    end
+	  end
+
+end
